@@ -48,8 +48,8 @@ testing_output = final_output[858:]
 
 # create model
 model = Sequential()
-model.add(Dense(9, input_dim=9, init='uniform', activation='relu'))
-model.add(Dense(8, init='uniform', activation='relu'))
+model.add(Dense(20, input_dim=9, init='uniform', activation='relu'))
+model.add(Dense(25, init='uniform', activation='relu'))
 model.add(Dense(1, init='uniform', activation='sigmoid'))
 
 # Compile model

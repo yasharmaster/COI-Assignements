@@ -28,8 +28,8 @@ Y_test = original_output[1301:]
 ##define base model
 def base_model():
      model = Sequential()
-     model.add(Dense(5, input_dim=5, init='normal', activation='relu'))
-     model.add(Dense(4, init='normal', activation='relu'))
+     model.add(Dense(20, input_dim=5, init='normal', activation='relu'))
+     model.add(Dense(25, init='normal', activation='relu'))
      model.add(Dense(1, init='normal'))
      model.compile(loss='mean_squared_error', optimizer = 'adam')
      return model
@@ -58,7 +58,7 @@ for i in range(1,50,1):
     ##define base model
     def base_model():
         model = Sequential()
-        model.add(Dense(5, input_dim=5, init='normal', activation='relu'))
+        model.add(Dense(20, input_dim=5, init='normal', activation='relu'))
         model.add(Dense(i, init='normal', activation='relu'))
         model.add(Dense(1, init='normal'))
         model.compile(loss='mean_squared_error', optimizer = 'adam')
@@ -93,8 +93,8 @@ v=[]
 for i in range(0,30):
     def base_model():
         model = Sequential()
-        model.add(Dense(5, input_dim=5, init='normal', activation='relu'))
-        model.add(Dense(4, init='normal', activation='relu'))
+        model.add(Dense(20, input_dim=5, init='normal', activation='relu'))
+        model.add(Dense(25, init='normal', activation='relu'))
         model.add(Dense(1, init='normal'))
         adam = keras.optimizers.Adam(lr=i/1000, beta_1=0.9, beta_2=0.999, epsilon=1e-08, decay=0.0)
         model.compile(loss='mean_squared_error', optimizer = adam)
